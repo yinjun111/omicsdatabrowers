@@ -1,0 +1,66 @@
+{
+  "datapaths":{
+    "data":"testing_data/gene.results.merged.tpm.filtered.auto.txt",
+    "data2":"testing_data/data_scatterplot_example.txt",
+    "data3":"testing_data/gene.results.merged.count.DESeq2.Wald.FC1.BH.P0.05.txt",
+    "labels":"testing_data/IBD_MouseModels_samples_anno_v2_IL10KO.txt",
+    "anno":"testing_data/geneanno.txt",
+    "groups":"datapath"
+  },
+  "modules":{
+    "graph1":{
+      "type":"pca",
+      "x":3,
+      "y":5,
+      "group":"Treatment",
+      "showEllipse":false,
+      "color":"Palette 2",
+      "shape":"Square",
+      "transformation":0.001,
+      "showLabels":true,
+      "showGroupLabels":false
+    },
+    "graph2":{
+      "type":"boxplot",
+      "transformation":0.001,
+      "dots":false,
+      "genes":["Gnai3", "H19"],
+      "combine":["Day", "Treatment"],
+      "color":"red"
+    },
+    "graph3":{
+      "type":"volcano",
+      "gene":"log2.fold.change..MLE...Group.Acute_DSS_D12.vs.Naive_D36",
+      "x":"log2.fold.change..MLE...Group.Acute_DSS_D12.vs.Naive_D36",
+      "y":"BH.adjusted.p.values",
+      "colorBy":"Significance..Abs.Log2FC...1.BHP.0.05",
+      "xlab":"X Axis Label",
+      "ylab":"Y Axis Label",
+      "xCutoff":1,
+      "yCutoff":0.05
+    },
+    "graph4":{
+      "type":"scatter",
+      "x":"X1",
+      "y":"X2",
+      "colorBy":"newsigs",
+      "shapeBy":"newsigs",
+      "sizeBy":"X1",
+      "xlim":0,
+      "ylim":0,
+      "xlab":"X Axis",
+      "ylab":"Y Axis",
+      "na.val": 0,
+      "na.rm": true,
+      "main": "Scatter Plot",
+      "colors": "colors",
+      "regress": true,
+      "cor": true
+    }
+  },
+  "metadata":{
+    "info1": "Metadata Information 1",
+    "info2": "Metadata Information 2"
+    
+  }
+}
