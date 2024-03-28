@@ -36,7 +36,7 @@ source("scatter_server.R")
 
 
 ui <- dashboardPage(
-  dashboardHeader(title = "Ferring Data Browser 2.0"),
+  dashboardHeader(title = "Omics Data Browser"),
   ## Sidebar content
   dashboardSidebar(sidebarMenu(
     id = "tabs",
